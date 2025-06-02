@@ -1,0 +1,112 @@
+/* 表格样式优化 */
+.el-table {
+  --el-table-border-color: #ebeef5;
+  --el-table-header-bg-color: #f5f7fa;
+  border-radius: 4px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* 表头样式 */
+.el-table th {
+  font-weight: bold;
+  color: #303133;
+  background-color: #f5f7fa;
+  height: 50px;
+}
+
+/* 单元格样式 */
+.el-table td {
+  padding: 12px 0;
+}
+
+/* 鼠标悬停行样式 */
+.el-table--enable-row-hover .el-table__body tr:hover > td {
+  background-color: #f0f7ff;
+}
+
+/* 表格内链接样式 */
+.cell-link {
+  color: #409eff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cell-link:hover {
+  color: #66b1ff;
+  text-decoration: underline;
+}
+
+/* 操作按钮间距 */
+.cell-btn + .cell-btn {
+  margin-left: 8px;
+}
+
+/* 表格分页容器样式 */
+.pagination-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding: 10px 0;
+}
+
+/* 卡片样式 */
+.statistic-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.statistic-card {
+  flex: 1;
+  min-width: 200px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #303133;
+}
+
+.success-value {
+  color: #67c23a;
+}
+
+.warning-value {
+  color: #e6a23c;
+}
+
+.danger-value {
+  color: #f56c6c;
+}
+
+/* 工具栏样式 */
+.tools-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 768px) {
+  .statistic-card {
+    min-width: 160px;
+  }
+
+  .card-value {
+    font-size: 20px;
+  }
+
+  .tools-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
